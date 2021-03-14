@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"log"
 
+
 	"github.com/MiningCryptoLive/ubiq-pool/util"
 	"github.com/MiningCryptoLive/ubiq-pool/storage"
 	"io/ioutil"
@@ -137,4 +138,6 @@ func (r *RestClient) doPost(url string, method string) ([]byte, error) {
 	}
 
 	return nil, err
+
 }
+
