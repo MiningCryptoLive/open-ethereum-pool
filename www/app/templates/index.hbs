@@ -1,36 +1,49 @@
-<div class="jumbotron-brand">
-  <div class="container">
+<div class="jumbotron">
+  <div class="container"><br>
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-4">
+	<div class="note note-info text-center">
         <h1 style="font-size: 24px">
-          <div class="ubiq-green">
+          <div class="ubiq-green"><center>
             <object type="image/svg+xml" data="ubiq-green-small.svg"></object>
-            <strong><span class="logo-2">Pool</span></strong>
+            <strong><span class="logo-2">Pool</span></strong></center>
           </div>
-        </h1>
-        <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong>, Payouts are continuos throughout the  day.
-        <br/>
-        <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.
+        </h1><h4>
+       <div><strong>Min. payout threshold: {{config.PayoutThreshold}}</strong></div><br>
+       <div> Payouts run every 2 Hours.</div><br>
+       <div> Stable, Professional, Profitable.</div><br>
+       <div> PPLNS Payout System</div><br>
+       <div> Explorer: <a href="https://ubiqscan.io">VIEW</a></div><br>
+	
+	</h4>
       </div>
-      <div class="col-md-3 stats">
-        <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
-        <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
-        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
+	</div>
+	
+      <div class="col-md-4">
+	<div class="note note-info text-center"><h4>
+        <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div><br>
+        <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div><br>
+        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div><br>
         {{#if stats.model.stats.lastBlockFound}}
           <div><i class="fa fa-clock-o"></i> Last Block Found: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
         {{/if}}
+	</h4>
       </div>
-      <div class="col-md-4 stats">
-        <div><i class="fa fa-unlock-alt"></i> Network Difficulty: <span>{{with-metric-prefix stats.difficulty}}</span></div>
-        <div><i class="fa fa-tachometer"></i> Network Hash Rate: <span>{{format-hashrate stats.hashrate}}</span></div>
-        <div><i class="fa fa-bars"></i> Blockchain Height: <span>{{format-number stats.height}}</span></div>
+	</div>
+      <div class="col-md-4">
+	<div class="note note-info text-center"><h4>
+        <div><i class="fa fa-unlock-alt"></i> Network Difficulty: <span>{{with-metric-prefix stats.difficulty}}</span></div><br>
+        <div><i class="fa fa-tachometer"></i> Network Hash Rate: <span>{{format-hashrate stats.hashrate}}</span></div><br>
+        <div><i class="fa fa-bars"></i> Blockchain Height: <span>{{format-number stats.height}}</span></div><br>
         <div><i class="fa fa-clock-o"></i> Current Round Variance: <span>{{format-number stats.roundVariance style='percent'}}</span></div>
-      </div>
+</h4>      
+</div>
     </div>
   </div>
 </div>
-
+</div>
 <div class="container">
+<div class="note note-info">
   <div class="stats">
     <h4>Your Stats &amp; Payment History</h4>
     <div class="input-group">
@@ -41,47 +54,19 @@
       </button>
       </span>
     </div>
+   </div>
   </div>
-  <div>
-    <div class="bs-callout bs-callout-danger">
-      <h4>
-        Warning
-      </h4>
-      <p>This is an experimental pool! All the coins mined are in an alpha network (that will be reset eventually) and are for testing purposed only.</p>
-    </div>
-    <div class="jumbotron">
-      <div class="container">
-        <h3 class="text-center" style="padding: 0 0 5px 0; margin: 0 0 40px 0;"> Instructions</h3>
-        <div class="row">
-          <div class="col-md-6">
-            <p class="lead text-center">
-              <a href="#/help" class="ul-link">
-                <span class="ul ul-danger">Getwork</span>
-              </a>
-            </p>
-          </div>
-          <div class="col-md-6">
-            <p class="lead text-center">
-              <a href="#/help" class="ul-link">
-                <span class="ul ul-warning">Stratum</span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr/>
-    <div>
-    {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
-    </div>
-    <h4 class="note note-info text-center">
-      EthDcrMiner64.exe -epool {{config.StratumHost}}:8008 -esm 0 -ewal &lt;address&gt; -eworker &lt;WORKER&gt; -allcoins 1 -allpools 1
-    </h4>
-  </div>
-  <div>
-    <hr/>
-    <h4 class="note note-info text-center">
-      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G
-    </h4>
-  </div>
+<div class="note note-info">
+{{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
 </div>
+<h4 class="note note-info text-center">
+<a href="https://miningrigrentals.com"><img src="./homelogo.png" border ="0"></a><br><br>
+<i class="fal fa-server"></i> Server: ubiq.miningcrypto.live <br><br>
+<i class="fab fa-megaport"></i> 3G Port: 12012<br><br>
+<i class="fab fa-megaport"></i> 5G Port: 12015<br><br>
+<i class="fal fa-user-astronaut"></i> Username: Wallet ID<br><br>
+<i class="fal fa-key"></i> Password: x <br>
+</h4>
+</div>
+
+

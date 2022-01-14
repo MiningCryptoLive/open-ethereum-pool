@@ -1,26 +1,30 @@
-<div class="jumbotron-brand">
+<div class="jumbotron">
   <div class="container">
-    <p class="lead">Pool always pays tx fees from it's own pocket for now.</p>
+   <div class="note note-info">
+    <p class="lead">Pool always pays tx fees.</p>
     <strong>Total payments sent:</strong> <span class="label label-info">{{model.paymentsTotal}}</span>
   </div>
 </div>
+</div>
 <div class="container">
+<div class="note note-info">
   {{#if model.payments}}
   <h4>Latest Payouts</h4>
+<div class="table table-responsive">
   <table class="table table-condensed table-striped">
     <thead>
       <tr>
-        <th>Time</th>
-        <th>Amount</th>
-        <th>Address</th>
-        <th>Tx ID</th>
+        <th style="color:black">Time</th>
+        <th style="color:black">Amount</th>
+        <th style="color:black">Address</th>
+        <th style="color:black">Tx ID</th>
       </tr>
     </thead>
     <tbody>
       {{#each model.payments as |tx|}}
         <tr>
-          <td>{{format-date-locale tx.timestamp}}</td>
-          <td>{{format-number tx.formatAmount}}</td>
+          <td style="color:black">{{format-date-locale tx.timestamp}}</td>
+          <td style="color:black">{{format-number tx.formatAmount}}</td>
           <td>
             <a href="http://ubiqscan.io/en/address/{{tx.address}}" class="hash" rel="nofollow" target="_blank">{{tx.address}}</a>
           </td>
@@ -31,7 +35,9 @@
       {{/each}}
     </tbody>
   </table>
+</div>
   {{else}}
   <h3>No payouts yet</h3>
   {{/if}}
+</div>
 </div>

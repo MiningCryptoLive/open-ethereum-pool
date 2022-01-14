@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
                 t = e.getWithDefault("stats.model.poolCharts"),
                 a = {
                     chart: {
-                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        backgroundColor: "rgba(0, 0, 0, 0)",
                         type: "spline",
                         height: 300,
                         marginRight: 10,
@@ -32,13 +32,32 @@ export default Ember.Controller.extend({
                             }
                         }
                     },
+                   
+                   
                     title: {
-                        text: "Our pool's hashrate"
+			
+                        text: "Pool Hashrate",
+                            style: {
+                                color: "#FFF",
+				fontWeight: "bold",
+				fontSize: "24px",
+				fontFamily: "TrebuchetMS, Verdana, sans-serif"
+                            }
                     },
+  		    subtitle: {
+    			text: '',
+                            style: {
+                                color: "#FFF",
+				fontWeight: "bold",
+				fontSize: "12px",
+				fontFamily: "TrebuchetMS, Verdana, sans-serif"
+                            }
+ 		    },
+
                     xAxis: {
                         labels: {
                             style: {
-                                color: "#000"
+                                color: "#FFF"
                             }
                         },
                         ordinal: false,
@@ -48,20 +67,20 @@ export default Ember.Controller.extend({
                         title: {
                             text: "HASHRATE",
                             style: {
-                                color: "#000"
+                                color: "#FFF"
                             }
                         },
                         min: 0,
                         labels: {
                             style: {
-                                color: "#000"
+                                color: "#FFF"
                             }
                         }
                     },
                     plotLines: [{
                         value: 0,
-                        width: 1,
-                        color: "#000"
+                        width: 2,
+                        color: "#ccc"
                     }],
                     legend: {
                         enabled: false
