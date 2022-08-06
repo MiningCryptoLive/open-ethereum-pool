@@ -1,0 +1,191 @@
+<<<<<<< HEAD
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+	  <div class="note note-success">
+        <h4>Your Stats &amp; Payment History</h4>
+        <div class="input-group">
+          {{input value=cachedLogin class="form-control" placeholder="Enter Your Ethereum Classic Address"}}
+          <span class="input-group-btn">
+            <button class="btn btn-primary btn-etc" type="button" {{action 'lookup' cachedLogin}}>
+              <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
+            </button>
+          </span>
+        </div>
+		<br>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<div class="col-xs-12 col-md-12">
+<div class="note note-success"><center>
+	<h4>Join our <i class='fab fa-discord'></i> <a class="alert-link" href="https://discord.gg/twkSyKZBNh">Discord</a> for support!<br> PAYOUT INTERVAL 6HRS <br><a href="https://etcsolo.miningcrypto.live">GO MINE ETC SOLO</a>&nbsp;
+	<a href="https://ergo.miningcrypto.live">GO MINE ERGO PPLNS</a>&nbsp;&nbsp;<a href="https://ergosolo.miningcrypto.live">GO MINE ERGO SOLO</a>
+</h4></center>
+	</div>
+  </div>
+</div>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+	  <div class="note note-success">
+	   <center>
+	    <div class="text-black"><h1>{{format-number stats.model.minersTotal}}</h1></div><small class="text-black"><b>ACTIVE</b></small> <small class="text-green"><u>MINERS</u></small>
+	   </center>
+	  </div>
+	</div>
+	<div class="col-xs-6 col-md-4">
+	<div class="note note-success">
+	<center>
+	<div class="text-green"><h1>{{format-hashrate stats.model.hashrate}}</h1></div><small class="text-black"><b>POOL</b></small><small class="text-green"><u> HASHRATE</u></small>
+	</center>
+	</div>
+  </div>
+	<div class="col-xs-6 col-md-4">
+	  <div class="note note-success">
+	   <center>
+		<div class="text-black"><h1><span>$ {{model.exchangedata.current_price}}</span></h1></div><small class="text-black"><b>CURRENT</b></small> <small class="text-green"><u>PRICE</u></small>
+	   </center>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-4">
+	  <div class="note note-success">
+	   <center>
+		<div class="text-black"><h1>{{format-number stats.height}}</h1></div><small class="text-black"><b>BLOCKCHAIN</b></small> <small class="text-green"><u>HEIGHT</u></small>
+	   </center>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-4">
+	  <div class="note note-success">
+	   <center>
+		<div class="text-green"><h1>{{format-hashrate stats.hashrate}}</h1></div><small class="text-black"><b>NETWORK</b></small> <small class="text-green"><u>HASHRATE</u></small>
+	   </center>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-4">
+	<div class="note note-success">
+	   <center>
+		<div class="text-red"><h1>{{with-metric-prefix stats.difficulty}}</h1></div><small class="text-black"><b>NETWORK</b></small><small class="text-green"><u> DIFFICULTY</u></small>
+	   </center>
+	</div>
+     </div>
+    <div class="col-xs-6 col-md-4">
+	  <div class="note note-success">
+	   <center>
+		<div class="text-green"><h1>{{config.PoolFee}}</h1></div><small class="text-black"><b>POOL</b></small> <small class="text-green"><u>FEE</u></small>
+	   </center>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-4">
+	  <div class="note note-success">
+	   <center>
+		<div class="text-black"><h1>{{format-number stats.roundVariance style='percent'}}</h1></div><small class="text-black"><b>POOL</b></small> <small class="text-green"><u>LUCK</u></small>
+	   </center>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-4">
+          <div class="note note-success">
+	   <center>
+		<div class="text-green"><h1>{{config.PayoutThreshold}}</h1></div><small class="text-black"><b>MINIMUM</b></small><small class="text-green"><u> PAYOUT</u></small>
+		</center>
+		</div>
+             </div>
+	
+    <div class="col-xs-12 col-md-6">
+	  <div class="note note-success">
+	   <center>
+	    <h3>Pool Hashrate</h3>
+	     {{high-charts mode=mode chartOptions=chartOptions content=chartData}}
+	   </center>
+	  </div>
+	</div>
+	<br>
+    <div class="col-xs-12 col-md-6 pull-right">
+	  <div class="note note-success">
+	   <center>
+	    <h3>Network Difficulty</h3>
+	     {{high-charts mode=mode chartOptions=chartDiff content=chartData}}
+	   </center>
+	  </div>
+	</div>
+  </div>
+=======
+<div class="jumbotron">
+  <div class="container"><br>
+    <div class="row">
+      <div class="col-md-4">
+	<div class="note note-info text-center">
+        <h1 style="font-size: 24px">
+          <div class="ubiq-green"><center>
+            <object type="image/svg+xml" data="ubiq-green-small.svg"></object>
+            <strong><span class="logo-2">Pool</span></strong></center>
+          </div>
+        </h1><h4>
+       <div><strong>Min. payout threshold: {{config.PayoutThreshold}}</strong></div><br>
+       <div> Payouts run every 2 Hours.</div><br>
+       <div> Stable, Professional, Profitable.</div><br>
+       <div> PPLNS Payout System</div><br>
+       <div> Explorer: <a href="https://ubiqscan.io">VIEW</a></div><br>
+	
+	</h4>
+      </div>
+	</div>
+	
+      <div class="col-md-4">
+	<div class="note note-info text-center"><h4>
+        <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div><br>
+        <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div><br>
+        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div><br>
+        {{#if stats.model.stats.lastBlockFound}}
+          <div><i class="fa fa-clock-o"></i> Last Block Found: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
+        {{/if}}
+	</h4>
+      </div>
+	</div>
+      <div class="col-md-4">
+	<div class="note note-info text-center"><h4>
+        <div><i class="fa fa-unlock-alt"></i> Network Difficulty: <span>{{with-metric-prefix stats.difficulty}}</span></div><br>
+        <div><i class="fa fa-tachometer"></i> Network Hash Rate: <span>{{format-hashrate stats.hashrate}}</span></div><br>
+        <div><i class="fa fa-bars"></i> Blockchain Height: <span>{{format-number stats.height}}</span></div><br>
+        <div><i class="fa fa-clock-o"></i> Current Round Variance: <span>{{format-number stats.roundVariance style='percent'}}</span></div>
+</h4>      
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container">
+<div class="note note-info">
+  <div class="stats">
+    <h4>Your Stats &amp; Payment History</h4>
+    <div class="input-group">
+      {{input value=cachedLogin class="form-control" placeholder="Enter Your Ubiq Address"}}
+      <span class="input-group-btn">
+        <button class="btn btn-primary btn-ubiq" type="button" {{action 'lookup' cachedLogin}}>
+          <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
+      </button>
+      </span>
+    </div>
+   </div>
+  </div>
+<div class="note note-info">
+{{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
+>>>>>>> 13476b593a1aeae39d6422203e4c68257f024d8a
+</div>
+<h4 class="note note-info text-center">
+<a href="https://miningrigrentals.com"><img src="./homelogo.png" border ="0"></a><br><br>
+<i class="fal fa-server"></i> Server: ubiq.miningcrypto.live <br><br>
+<i class="fab fa-megaport"></i> 3G Port: 12012<br><br>
+<i class="fab fa-megaport"></i> 5G Port: 12015<br><br>
+<i class="fal fa-user-astronaut"></i> Username: Wallet ID<br><br>
+<i class="fal fa-key"></i> Password: x <br>
+</h4>
+</div>
+
+

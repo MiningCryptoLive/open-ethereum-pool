@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+<br>
+  <div class="row">
+  {{#each-in model.luck as |total row|}}
+    <div class="col-xs-6 col-md-3">
+	  <div class="note note-success">
+	    <div class="text-black"><h2>{{total}}</h2></div><small class="text-black"><b>TOTAL</b></small> <small class="text-green"><u>BLOCKS</u></small>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-3">
+	  <div class="note note-success">
+	    <div class="text-black"><h2>{{format-number row.luck style='percent'}}</h2></div><small class="text-black"><b>SHARES /</b></small> <small class="text-green"><u> DIFF</u></small>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-3">
+	  <div class="note note-success">
+	    <div class="text-black"><h2>{{format-number row.uncleRate style='percent'}}</h2></div><small class="text-black"><b>UNCLE</b></small> <small class="text-green"><u>RATE</u></small>
+	  </div>
+	</div>
+    <div class="col-xs-6 col-md-3">
+	  <div class="note note-success">
+	    <div class="text-black"><h2>{{format-number row.orphanRate style='percent'}}</h2></div><small class="text-black"><b>OPRPHAN</b></small> <small class="text-green"><u>RATE</u></small>
+	  </div>
+	</div>
+  {{/each-in}}
+  </div>
+
+=======
+<div class="table table-responsive">
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th style="color:black">Blocks</th>
+      <th style="color:black">Average Variance</th>
+      <th style="color:black">Uncle Rate</th>
+      <th style="color:black"y
+>Orphan Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each-in model.luck as |total row|}}
+  <tr>
+    <td style="color:black">{{total}}</td>
+    <td style="color:black">{{format-number row.luck style='percent'}}</td>
+    <td style="color:black">{{format-number row.uncleRate style='percent'}}</td>
+    <td style="color:black">{{format-number row.orphanRate style='percent'}}</td>
+  </tr>
+  {{/each-in}}
+  </tbody>
+</table>
+</div>
+>>>>>>> 13476b593a1aeae39d6422203e4c68257f024d8a
