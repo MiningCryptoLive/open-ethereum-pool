@@ -7,14 +7,14 @@
     <div class="col-xs-12 col-md-4">
 	  <div class="note note-success">
 	   <center>
-		<div class="text-black"><h2>{{format-balance model.stats.pending}}<span class="text-green"> ETC</span></h2></div><small class="text-black"><b>CURRENT</b></small> <small class="text-green"><u>PAYMENT</u></small>
+		<div class="text-black"><h2>{{format-balance model.stats.pending}}<span class="text-green"> UBIQ</span></h2></div><small class="text-black"><b>CURRENT</b></small> <small class="text-green"><u>PAYMENT</u></small>
 	   </center>
 	  </div>
 	</div>
     <div class="col-xs-12 col-md-4">
 	  <div class="note note-success">
 	   <center>
-		<div class="text-black"><h2>{{format-balance model.24hreward}}<span class="text-green"> ETC</span></h2></div><small class="text-black"><b>LAST 24H</b></small> <small class="text-green"><u>REWARD</u></small>
+		<div class="text-black"><h2>{{format-balance model.24hreward}}<span class="text-green"> UBIQ</span></h2></div><small class="text-black"><b>LAST 24H</b></small> <small class="text-green"><u>REWARD</u></small>
 	   </center>
 	  </div>
 	</div>
@@ -28,21 +28,21 @@
     <div class="col-xs-12 col-md-4">
 	  <div class="note note-success">
 	   <center>
-		<div class="text-black"><h2>{{format-balance model.stats.immature}} <span class="text-green"> ETC</span></h2></div><small class="text-black"><b>IMMATURE</b></small> <small class="text-green"><u>BALANCE</u></small>
+		<div class="text-black"><h2>{{format-balance model.stats.immature}} <span class="text-green"> UBIQ</span></h2></div><small class="text-black"><b>IMMATURE</b></small> <small class="text-green"><u>BALANCE</u></small>
 	   </center>
 	  </div>
 	</div>
     <div class="col-xs-12 col-md-4">
 	  <div class="note note-success">
 	   <center>
-		<div class="text-black"><h2>{{format-balance model.stats.balance}} <span class="text-green"> ETC</span></h2></div><small class="text-black"><b>PENDING</b></small> <small class="text-green"><u>BALANCE</u></small>
+		<div class="text-black"><h2>{{format-balance model.stats.balance}} <span class="text-green"> UBIQ</span></h2></div><small class="text-black"><b>PENDING</b></small> <small class="text-green"><u>BALANCE</u></small>
 	   </center>
 	  </div>
 	</div>
     <div class="col-xs-12 col-md-4">
 	  <div class="note note-success">
 	   <center>
-		<div class="text-black"><h2>{{format-balance model.stats.paid}} <span class="text-green"> ETC</span></h2></div><small class="text-black"><b>TOTAL</b></small> <small class="text-green"><u>PAID</u></small>
+		<div class="text-black"><h2>{{format-balance model.stats.paid}} <span class="text-green"> UBIQ</span></h2></div><small class="text-black"><b>TOTAL</b></small> <small class="text-green"><u>PAID</u></small>
 	   </center>
 	  </div>
 	</div>
@@ -83,11 +83,10 @@
 		so you can perform maintenance of your rigs.
 	  </div>
 	</div>
-  </div>
-</div>
 
-<div class="container">
-  <ul class="nav nav-pills">
+<div class="note note-info">
+  <ul class="nav nav-tabs">
+
     {{#active-li currentWhen='account.index' role='presentation'}}
       {{#link-to 'account.index'}}Workers{{/link-to}}
     {{/active-li}}
@@ -99,5 +98,9 @@
     {{/active-li}}
   </ul>
 </div>
+
 <br>
+
+</div>
+
 {{outlet}}

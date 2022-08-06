@@ -4,8 +4,14 @@ go 1.17
 
 require (
 	github.com/gorilla/mux v1.8.0
+
 	github.com/ubiq/go-ubiq/v7 v7.0.0
 	github.com/ubiq/ubqhash v1.2.0
+
+	github.com/robfig/cron v1.2.0
+	github.com/ubiq/go-ubiq/v6 v6.0.0
+	github.com/ubiq/ubqhash v1.1.0
+
 	gopkg.in/redis.v3 v3.6.4
 )
 
